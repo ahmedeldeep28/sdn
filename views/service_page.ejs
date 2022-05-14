@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/css/main.css">
+    <title></title>
+</head>
+
+<body>
+    
+    <%- include('./part/navbar'); %>
+
+    <main class="logos mt-nav py-5 mt-5">
+        <div class="container">
+            <div class="row g-2">
+                <h2 class="text-center display-3">Members</h2>
+                <% for(let logo of service.logos) { %>
+                    <div class="col-6 col-sm-4 col-md-3 position-relative">
+                        <a href="<%= logo.link%>" class="stretched-link"></a>
+                        <img src="/<%= logo.image%>" alt="">
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <%- include('./part/footer') %>
+
+
+
+
+
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<div class="modal fade" id="cretae_team" tabindex="-1" aria-labelledby="cretae_team" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content overflow-hidden">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h4 class="mb-0 text-capitalize">Add a member to the team</h4>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/dashbord/team/create" method="post" enctype="multipart/form-data" class="row"
+                    id="form_cretae_team">
+                    <h5>member info</h5>
+                    <div class="col-12 col-md-6 mb-3">
+                        <label class="form-label label-1 text-capitalize">membere name</label>
+                        <input type="text" class="form-control" name="name" placeholder="enter doctor name" required>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <label class="form-label label-1 text-capitalize">job title</label>
+                        <input type="text" class="form-control" name="job" placeholder="enter job title" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="formFile" class="form-label">membere image</label>
+                        <input class="form-control" type="file" name="image" required>
+                    </div>
+                    <h5>Social media</h5>
+                    <div class="col-12 mb-3">
+                        <label class="form-label label-1 text-capitalize">facebook</label>
+                        <input type="url" class="form-control" name="facebook" placeholder="enter link facebook"
+                            required>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label label-1 text-capitalize">twitter</label>
+                        <input type="url" class="form-control" name="twitter" placeholder="enter link twitter" required>
+                    </div>
+                    <div class="col-12  mb-3">
+                        <label class="form-label label-1 text-capitalize">linkedin</label>
+                        <input type="url" class="form-control" name="linkedin" placeholder="enter link linkedin"
+                            required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" form="form_cretae_team">submit</button>
+            </div>
+
+        </div>
+    </div>
+</div>

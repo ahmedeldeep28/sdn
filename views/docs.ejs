@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <%- include('./part/navbar'); %>
+
+    <main class="py-5 overflow-visible">
+        <div class="container-xxl overflow-visible">
+            <div class="row overflow-visible">
+                <div class="col-md-9 ps-4 overflow-visible">
+                    <p>
+                    <h2>Pourquoi la mise en réseau définie par logiciel est-elle importante ?</h2>
+                    Le SDN représente un pas en avant substantiel par rapport à la mise en réseau traditionnelle, en ce
+                    sens qu’il permet ce qui suit :
+
+                    <h6>Contrôle accru avec plus de vitesse et de flexibilit : </h6>
+                    au lieu de programmer manuellement plusieurs périphériques matériels spécifiques au fournisseur, les
+                    développeurs peuvent contrôler le flux de trafic sur un réseau simplement en programmant un
+                    contrôleur logiciel standard ouvert.
+                    Les administrateurs réseau ont également plus de flexibilité dans le choix de l’équipement réseau,
+                    car ils peuvent choisir un seul protocole pour communiquer avec un nombre illimité de périphériques
+                    matériels via un contrôleur central.
+                    </p>
+                    <p>
+                    <h6>Infrastructure réseau personnalisable : </h6>
+                    avec un réseau défini par logiciel, les administrateurs peuvent configurer des services réseau et
+                    allouer des ressources virtuelles pour modifier l’infrastructure réseau en temps réel via un
+                    emplacement centralisé. Cela permet aux administrateurs réseau d’optimiser le flux de données via le
+                    réseau et de hiérarchiser les applications qui nécessitent plus de disponibilité. </p>
+                    <p>
+                    <h6>Sécurité robuste :</h6>
+                    un réseau défini par logiciel offre une visibilité sur l’ensemble du réseau, offrant une vue plus
+                    globale des menaces de sécurité. Avec la prolifération des appareils intelligents qui se connectent
+                    à Internet, le SDN offre des avantages évidents par rapport aux réseaux traditionnels. Les
+                    opérateurs peuvent créer des zones distinctes pour les appareils qui nécessitent différents niveaux
+                    de sécurité ou mettre immédiatement en quarantaine les appareils compromis afin qu’ils ne puissent
+                    pas infecter le reste du réseau.</p>
+                    <p>
+                    <h2>Avantages du Software-Defined Networking (SDN) </h2>
+                    De nombreux services et applications d’aujourd’hui, en particulier lorsqu’ils impliquent le cloud,
+                    ne pourraient pas fonctionner sans SDN. Le SDN permet aux données de se déplacer facilement entre
+                    des emplacements distribués, ce qui est essentiel pour les applications cloud.
+                    En outre, le SDN prend en charge le déplacement rapide des charges de travail sur un réseau. Par
+                    exemple, la division d’un réseau virtuel en sections, à l’aide d’une technique appelée
+                    virtualisation des fonctions réseau (NFV), permet aux fournisseurs de télécommunications de déplacer
+                    les services client vers des serveurs moins coûteux ou même vers les propres serveurs du client.
+                    Les fournisseurs de services peuvent utiliser une infrastructure de réseau virtuel pour déplacer les
+                    charges de travail des infrastructures de cloud privé vers les infrastructures de cloud public si
+                    nécessaire, et pour rendre de nouveaux services clients disponibles instantanément. Le SDN facilite
+                    également la flexibilité et la mise à l’échelle de tout réseau à mesure que les administrateurs
+                    réseau ajoutent ou suppriment des machines virtuelles, que ces machines soient sur site ou dans le
+                    cloud.
+
+                    Enfin, en raison de la vitesse et de la flexibilité offertes par le SDN, il est capable de prendre
+                    en charge les tendances et les technologies émergentes telles que l’edge computing et l’Internet des
+                    objets, qui nécessitent de transférer des données rapidement et facilement entre des sites distants.
+
+
+                    </p>
+                    <p>
+                    <h2>En quoi le SDN est-il différent du réseau traditionnel ?</h2>
+
+                    La principale différence entre le SDN et le réseau traditionnel est l’infrastructure : le SDN est
+                    basé sur le logiciel, tandis que le réseau traditionnel est basé sur le matériel. Parce que le plan
+                    de contrôle est basé sur un logiciel, le SDN est beaucoup plus flexible que la mise en réseau
+                    traditionnelle. Il permet aux administrateurs de contrôler le réseau, de modifier les paramètres de
+                    configuration, de provisionner des ressources et d’augmenter la capacité du réseau, le tout à partir
+                    d’une interface utilisateur centralisée, sans ajouter de matériel supplémentaire.
+
+                    Il existe également des différences de sécurité entre le SDN et le réseau traditionnel. Grâce à une
+                    plus grande visibilité et à la possibilité de définir des voies sécurisées, le SDN offre une
+                    meilleure sécurité à bien des égards. Cependant, étant donné que les réseaux définis par logiciel
+                    utilisent un contrôleur centralisé, la sécurisation du contrôleur est cruciale pour maintenir un
+                    réseau sécurisé, et ce point de défaillance unique représente une vulnérabilité potentielle du SDN.
+
+                    </p>
+                    <p>
+                    <h2>Quels sont les différents modèles de SDN ?</h2>
+                    Alors que la prémisse d’un logiciel centralisé contrôlant le flux de données dans les commutateurs
+                    et les routeurs s’applique à tous les réseaux définis par logiciel, il existe différents modèles de
+                    SDN.
+                    <h6> Open SDN:</h6>
+                    Les administrateurs réseau utilisent un protocole comme OpenFlow pour contrôler le comportement des
+                    commutateurs virtuels et physiques au niveau du plan de données.
+                    <h6> SDN by APIs:</h6>
+                    Au lieu d’utiliser un protocole ouvert, les interfaces de programmation d’applications contrôlent la
+                    façon dont les données se déplacent sur le réseau sur chaque périphérique.
+                    <h6> SDN Overlay Model:</h6>
+                    Un autre type de réseau défini par logiciel exécute un réseau virtuel au-dessus d’une infrastructure
+                    matérielle existante, créant des tunnels dynamiques vers différents centres de données sur site et
+                    distants. Le réseau virtuel alloue de la bande passante sur une variété de canaux et attribue des
+                    périphériques à chaque canal, laissant le réseau physique intact.
+                    <h6> Hybrid SDN:</h6>
+                    Ce modèle combine la mise en réseau définie par logiciel avec les protocoles réseau traditionnels
+                    dans un environnement pour prendre en charge différentes fonctions sur un réseau. Les protocoles
+                    réseau standard continuent de diriger une partie du trafic, tandis que le SDN assume la
+                    responsabilité des autres trafics, ce qui permet aux administrateurs réseau d’introduire le SDN par
+                    étapes dans un environnement hérité.
+                    </p>
+                </div>
+                <div class="col-md-3 p-3">
+                    <div class="card p-2 sticky-top">
+
+
+                        <li class="fs-6 text-capitalize">
+                            <a href="">SDN-DOCUMENT</a>
+                        </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('./part/footer') %>
+
+    <script src="/js/jqoury.min.js"></script>
+    <script src="/js/Popper.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
+
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

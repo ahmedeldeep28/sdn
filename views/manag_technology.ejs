@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Management message</title>
+</head>
+
+<body>
+
+
+    <%- include('./part/addtechnology'); %>
+        <%- include('./part/aside'); %>
+        <main class="page_content mt-5 mt-md-0 px-3">
+                <h1 class="mt-3">Management technology</h1>
+                <div class="text-center mt-5">
+                    <button type="button" class="btn btn-light text-capitalize p-3" data-bs-toggle="modal" data-bs-target="#add_technology">
+                        <span class="d-block fs-4">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+                        add technology
+                    </button>
+                </div>
+                <section class="py-4">
+                    <div class="container">
+                        <div class="row g-3">
+                            <% for(let technology of technologys) { %>
+                                <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                                    <a href="<%- technology.link%>">
+                                        <div class="card text-center h-100">
+                                            <div class="card-body">
+                                                <div class="icon transition display-3 text-secondary">
+                                                    <%- technology.icon%>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h4 class="card-title text-capitalize">
+                                                        <%- technology.title%>
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <form action="/dashbord/technology/delete" method="post">
+                                                    <input type="text" name="technologyId" value="<%- technology._id%>"
+                                                        hidden>
+                                                    <button class="btn btn-danger" type="submit">
+                                                        delete
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <% } %>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+
+
+
+
+
+            <script src="/js/popper.min.js"></script>
+            <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>

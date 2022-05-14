@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/css/main.css">
+    <title>sdn</title>
+</head>
+
+<body>
+
+    <%- include('./part/navbar') %>
+
+        <header class="header-home mt-nav bg-gradient-blue d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-welcome">
+                        <div>
+                            <h1 class="h1 text-wihte">Nous fournissons la meilleure solution informatique</h1>
+                            <a href="/docs" class="btn btn-outline-secondary">learn more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-none d-md-flex">
+                        <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_oOGQFY.json"
+                            background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay>
+                        </lottie-player>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="services py-5 my-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <h2 class="fs-1">Solutions informatiques pour startups et entreprises
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4 mt-3">
+                        <div class="card border-0 bg-transparent  position-relative border py-3 text-center">
+                            <div class="avatar bg-wihte box-center shadow-sm rounded-circle m-auto my-3">
+                                <i class="fa-solid fa-sitemap fs-1 text-secondary"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fs-3">développement informatique</h5>
+                                <p class="card-text fs-6"> consiste à concevoir et maintenir le fonctionnement des
+                                    logiciels informatiques. Cette activité recouvre les étapes d'étude, de conception,
+                                    de transformation, de mise au point et de maintenance des logiciels.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mt-3">
+                        <div class="card border-0 bg-transparent  position-relative border py-3 text-center">
+                            <div class="avatar bg-wihte box-center shadow-sm rounded-circle m-auto my-3">
+                                <i class="fa-solid fa-sitemap fs-1 text-secondary"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fs-3">réseau </h5>
+                                <p class="card-text fs-6">Une fonction basique de servir de plateforme pour partager les
+                                    données</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mt-3">
+                        <div class="card border-0 bg-transparent  position-relative border py-3 text-center">
+                            <div class="avatar bg-wihte box-center shadow-sm rounded-circle m-auto my-3">
+                                <i class="fa-solid fa-sitemap fs-1 text-secondary"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fs-3">securite</h5>
+                                <p class="card-text fs-6">cette partie consiste a protège l'intégrité des technologies
+                                    de l'information comme les systèmes, les réseaux et les données informatiques contre
+                                    les attaques, les dommages ou les accès non autorisés.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="industries bg-gradient-blue py-5 my-5">
+            <div class="container py-5">
+                <div class="row my-3 justify-content-between">
+                    <div class="col-sm-12 col-md-6">
+                        <h3 class="h2 text-wihte">Des services informatiques personnalisés pour votre industrie</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <% for(let technology of technologys) { %>
+                        <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                            <a href="<%= technology.link%>">
+                                <div class="card text-center h-100 py-4">
+                                    <div class="icon transition display-3 text-secondary">
+                                        <%- technology.icon%>
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title text-capitalize text-wihte">
+                                            <%= technology.title%>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <% } %>
+                </div>
+            </div>
+        </section>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#eef4fa" fill-opacity="1"
+                d="M0,160L120,149.3C240,139,480,117,720,122.7C960,128,1200,160,1320,176L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+            </path>
+        </svg>
+        <section class="features bg-accent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-lg-7">
+                        <h3>Software-Defined-Network</h3>
+                        <p class="lead">Le réseau défini par logiciel (SDN) est une architecture qui abstrait
+                            différentes
+                            couches distinctes d’un réseau pour rendre les réseaux agiles et flexibles. L’objectif du
+                            SDN
+                            est d’améliorer le contrôle du réseau en permettant aux entreprises et aux fournisseurs de
+                            services de répondre rapidement à l’évolution des besoins de l’entreprise.
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-between py-3 mt-3">
+                    <div class="image col-md-6 mt-4">
+                        <img src="./img/Rectangle 1.png" alt="">
+                    </div>
+                    <div class="col-md-5 mt-4">
+                        <div class="features-item mt-3">
+                            <div class="features-icon box-center mb-2 fs-3 text-secondary rounded bg-primary p-3">
+                                <i class="fa-brands fa-bity"></i>
+                            </div>
+                            <h3 class="fs-3">Couche Application </h3>
+                            <p>La couche d’application contient les applications ou fonctions réseau typiques utilisées
+                                par
+                                les organisations. Cela peut inclure des systèmes de détection d’intrusion,
+                                l’équilibrage de
+                                charge ou des pare-feu. Lorsqu’un réseau traditionnel utiliserait une appliance
+                                spécialisée,
+                                telle qu’un pare-feu ou un équilibreur de charge, un réseau défini par logiciel remplace
+                                la
+                                solution matérielle-logicielle par une application qui utilise un contrôleur pour gérer
+                                le
+                                comportement du plan de données.</p>
+                        </div>
+                        <div class="features-item mt-3">
+                            <div class="features-icon box-center mb-2 fs-3 text-secondary rounded bg-primary p-3">
+                                <i class="fa-brands fa-unity"></i>
+                            </div>
+                            <h3 class="fs-3">Couche Control</h3>
+                            <p>La couche de contrôle représente le logiciel de contrôleur SDN centralisé qui agit comme
+                                le
+                                cerveau du réseau défini par logiciel. Ce contrôleur réside sur un serveur et gère les
+                                politiques et les flux de trafic sur l'ensemble du réseau.Couche d’infrastructure.</p>
+                        </div>
+                        <div class="features-item mt-3">
+                            <div class="features-icon box-center mb-2 fs-3 text-secondary rounded bg-primary p-3">
+                                <i class="fa-solid fa-building-shield"></i>
+                            </div>
+                            <h3 class="fs-3">Couche Infrastructure </h3>
+                            <p>La couche d’infrastructure est composée des commutateurs physiques du réseau. Ces
+                                commutateurs transfèrent le trafic réseau vers leurs destinations.</p>
+                        </div>
+                        <button class="btn btn-primary text-capitalize mt-3">lern more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#eef4fa" fill-opacity="1"
+                d="M0,320L120,320C240,320,480,320,720,304C960,288,1200,256,1320,240L1440,224L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z">
+            </path>
+        </svg>
+
+        <section class="team py-5 my-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <h2 class="fs-1">Notre équipe</h2>
+                    </div>
+                </div>
+                <div class="row g-3 mt-3">
+                    <% for(let memberTeam of memberTeams) { %>
+                        <div class="col-12 col-sm-6 col-lg-4 mt-4">
+                            <div class="card card_team rounded-5 shadow-sm">
+                                <header>
+                                    <img src="/<%- memberTeam.image%>" class="card-img-top" alt="...">
+                                </header>
+                                <div class="card-body">
+                                    <h4 class="card-title mb-2 text-capitalize">
+                                        <%- memberTeam.name%>
+                                    </h4>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <p class="text-secondary fs-4 text-capitalize">
+                                            <%- memberTeam.job%>
+                                        </p>
+                                        <ul class="socail d-flex justify-content-center list-unstyled">
+                                            <li class="socail__item me-2">
+                                                <a class="text-dark d-block fs-4" href="<%- memberTeam.facebook%>">
+                                                    <i class="fa-brands fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li class="socail__item me-2">
+                                                <a class="text-dark d-block fs-4" href="<%- memberTeam.twitter%>">
+                                                    <i class="fa-brands fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li class="socail__item me-2">
+                                                <a class="text-dark d-block fs-4" href="<%- memberTeam.linkedin%>">
+                                                    <i class="fa-brands fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="testimonial bg-gradient-blue">
+            <div class="container py-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-7 text-center">
+                        <span class="text-secondary fs-5">Testimonial</span>
+                        <h2 class="fs-1 text-white">Kinds Words From Customers</h2>
+                    </div>
+                </div>
+                <div class="swiper mySwiper py-5 ">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide rounded-3">
+                            <div class="card shadow-sm ">
+                                <div class="card-body pt-1">
+                                    <span class="fs-1 text-secondary">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </span>
+                                    <p class="card-text fs-5"> Excellente entreprise et idée avec does grandes valeur et
+                                        contenu grand merci a vous
+                                    </p>
+                                </div>
+                                <div class="card-footer py-2 bg-transparent border-success">
+                                    <h6 class="mb-0 fs-5 text-capitalize">Amira</h6>
+                                    <p class="m-0 fs-5 fw-light text-capitalize">informaticienne</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide rounded-3">
+                            <div class="card shadow-sm ">
+                                <div class="card-body pt-1">
+                                    <span class="fs-1 text-secondary">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </span>
+                                    <p class="card-text fs-5">Toute l'équipe est très professionnelle et je vous
+                                        remerciez
+                                        pour tous services disponibles
+                                    </p>
+                                </div>
+                                <div class="card-footer py-2 bg-transparent border-success">
+                                    <h6 class="mb-0 fs-5 text-capitalize">Imane Issa</h6>
+                                    <p class="m-0 fs-5 fw-light text-capitalize">etudiante</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide rounded-3">
+                            <div class="card shadow-sm ">
+                                <div class="card-body pt-1">
+                                    <span class="fs-1 text-secondary">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </span>
+                                    <p class="card-text fs-5">Cours intéressants et utiles dont nous avons beaucoup
+                                        profité
+                                        Merci à l'équipe de travail
+
+                                    </p>
+                                </div>
+                                <div class="card-footer py-2 bg-transparent border-success">
+                                    <h6 class="mb-0 fs-5 text-capitalize">Hicham Ebrahim</h6>
+                                    <p class="m-0 fs-5 fw-light text-capitalize">technicien it</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide rounded-3">
+                            <div class="card shadow-sm ">
+                                <div class="card-body pt-1">
+                                    <span class="fs-1 text-secondary">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </span>
+                                    <p class="card-text fs-5">Application excellente et très utile. Et en progrès
+                                        continu..Je vous remercie pour vos grands efforts..en attente de tous les
+                                        nouveaux
+
+                                    </p>
+                                </div>
+                                <div class="card-footer py-2 bg-transparent border-success">
+                                    <h6 class="mb-0 fs-5 text-capitalize">ahmed adem</h6>
+                                    <p class="m-0 fs-5 fw-light text-capitalize">it developer</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide rounded-3">
+                            <div class="card shadow-sm ">
+                                <div class="card-body pt-1">
+                                    <span class="fs-1 text-secondary">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </span>
+                                    <p class="card-text fs-5">Ils fournissent des services précieux et incroyables. De
+                                        haute
+                                        qualité, je ne faisais que lire leurs teneurs, mais j'ai découvert tout ce qui
+                                        était
+                                        exceptionnel. Je vous remercierais tous.
+
+                                    </p>
+                                </div>
+                                <div class="card-footer py-2 bg-transparent border-success">
+                                    <h6 class="mb-0 fs-5 text-capitalize">Ala</h6>
+                                    <p class="m-0 fs-5 fw-light text-capitalize">backend</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <%- include('./part/footer') %>
+
+
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+            <script src="/js/jqoury.min.js"></script>
+            <script src="/js/Popper.js"></script>
+            <script src="/js/bootstrap.min.js"></script>
+            <script src="./js/main.js"></script>
+</body>
+
+</html>

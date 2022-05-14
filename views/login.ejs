@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>login</title>
+</head>
+
+<body>
+    
+    <%- include('./part/navbar'); %>
+
+    <main class="vh-75 py-5 d-flex justify-content-center align-items-center">
+        <div class="container ">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-6">
+                    <div class="card p-3 shadow">
+                        <h4 class="text-capitalize mb-3">login dashbord</h4>
+                        <form action="/login" method="post">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" name="email"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" name="password"
+                                    placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+                            <button class="btn btn-primary">login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <%- include('./part/footer') %>
+
+
+
+
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

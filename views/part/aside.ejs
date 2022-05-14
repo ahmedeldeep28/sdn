@@ -1,0 +1,73 @@
+<aside class="sidebar border-end px-1 shadow-sm vh-100">
+    <div class="d-flex d-sm-none flex-row justify-content-end p-2">
+        <button class="btn btn-light"><i class="fa-solid fa-x"></i></button>
+    </div>
+    <ul class="nav flex-column">
+        <li class="nav-item text-capitalize">
+            <a class="nav-link fs-5 text-dark" aria-current="page" href="/dashbord">home</a>
+        </li>
+        <li class="nav-item text-capitalize">
+            <a class="nav-link fs-5 text-dark" href="/dashbord/technology">technology</a>
+        </li>
+
+        <li class="nav-item text-capitalize">
+            <a class="nav-link fs-5 text-dark" href="/dashbord/services">services</a>
+        </li>
+        <li class="nav-item text-capitalize">
+            <a class="nav-link fs-5 text-dark" href="/dashbord/team">team</a>
+        </li>
+        <li class="nav-item text-capitalize">
+            <a class="nav-link fs-5 text-dark" href="/dashbord/messages">messages</a>
+        </li>
+    </ul>
+    <div class="footer w-100 position-absolute bottom-0 start-50 translate-middle-x">
+        <form action="/logout" method="POST">
+            <button class="btn btn-light btn-lg w-100" type="submit">log out
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+
+<nav class="navbar navbar-light bg-light d-block d-md-none">
+    <div class="container">
+        <button class="btn btn-light fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft"
+            aria-controls="offcanvasLeft">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeft">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="nav flex-column">
+            <li class="nav-item text-capitalize">
+                <a class="nav-link fs-5 text-dark" aria-current="page" href="/dashbord">home</a>
+            </li>
+            <li class="nav-item text-capitalize">
+                <a class="nav-link fs-5 text-dark" href="/dashbord/technology">technology</a>
+            </li>
+
+            <li class="nav-item text-capitalize">
+                <a class="nav-link fs-5 text-dark" href="/dashbord/services">services</a>
+            </li>
+            <li class="nav-item text-capitalize">
+                <a class="nav-link fs-5 text-dark" href="/dashbord/team">team</a>
+            </li>
+            <li class="nav-item text-capitalize">
+                <a class="nav-link fs-5 text-dark" href="/dashbord/messages">messages</a>
+            </li>
+        </ul>
+        <div class="footer w-100 position-absolute bottom-0 start-50 translate-middle-x">
+            <form action="/logout" method="POST">
+                <button class="btn btn-light btn-lg w-100" type="submit">log out
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

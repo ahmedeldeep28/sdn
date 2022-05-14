@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Management message</title>
+</head>
+
+<body>
+
+
+    <%- include('./part/aside'); %>
+        <main class="page_content mt-5 mt-md-0 px-3">
+            <h1 class="mt-3">Management message</h1>
+
+            <section class="py-5">
+                <div class="container">
+                    <div class="row g-3">
+                        <% for(let message of messages) { %>
+                            <div class="col-12 col-sm-6 col-lg-4 mt-4">
+                                <div class="card mb-4 shadow-sm rounded-5">
+                                    <div class="card-body">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2">
+                                                <strong>name:</strong><span class="ms-2"><%= message.name%></span>
+                                            </li>
+                                            <li class="mb-2">
+                                                <strong>email:</strong><span class="ms-2"><%= message.email%></span>
+                                            </li>
+                                            <li class="mb-2">
+                                                <strong>subject:</strong><span class="ms-2"><%= message.subject%></span>
+                                            </li>
+                                            <li class="mb-2">
+                                                <strong>message:</strong>
+                                                <span class="d-block"><%= message.message%></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer">
+                                        <form action="/dashbord/messages/delete" method="post">
+                                            <input type="text" name="messageId" value="<%- message._id%>" hidden>
+                                            <button class="btn btn-danger" type="submit">
+                                                delete
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+
+
+
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
