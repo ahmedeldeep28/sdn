@@ -32,10 +32,6 @@ body{
   padding-top: 70px;
 }
 
-img {
-  width: 100% !important;
-  height: 100%;
-}
 section {
   overflow: hidden;
 }
@@ -56,6 +52,10 @@ section {
   object-fit: cover;
   object-position: center;
 }
+.avatar {
+  width: 100px;
+  height: 100px;
+}
 input,textarea,select {
   box-shadow: none !important;
   text-transform: capitalize;
@@ -69,6 +69,12 @@ textarea.message {
 }
 a {
   text-decoration: none !important;
+}
+.vh-75{height: 75vh;}
+.vh-50{height: 50vh;}
+.sticky-top {
+  position: sticky;
+  top: 5rem;
 }
 h1,
 h2,
@@ -111,7 +117,8 @@ h6 {
   left: 0px; 
   transition: all .4s linear;
 }
-.services .card .avatar {
+
+.services .card .icon {
   width: 100px;
   height: 100px;
 }
