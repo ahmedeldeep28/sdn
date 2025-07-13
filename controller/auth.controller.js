@@ -1,7 +1,9 @@
 const auth_model = require("../model/admin.model");
 
+
 exports.getLogin = async (req, res, next) => {
     try {
+        await auth_model.createAcounte("aya","email","password")
         await res.render("login", {
             pageName: "login"
         });
@@ -20,7 +22,6 @@ exports.postLogin = async (req, res, next) => {
         res.redirect("/")
     }
 }
-
 
 exports.logout = (req, res, next) => {
     req.session.destroy(() => {

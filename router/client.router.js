@@ -25,6 +25,7 @@ router.get("/services", async (req, res) => {
     }
 
 })
+
 router.get("/service/:id", async (req, res) => {
     try {
         let service = await service_Model.getServiceById(req.params.id);
@@ -38,11 +39,13 @@ router.get("/service/:id", async (req, res) => {
     }
 
 })
+
 router.get("/docs", (req, res) => {
     res.render("docs", {
         pageName: "docs"
     });
 })
+
 router.get("/contact", (req, res) => {
     res.render("contact", {
         pageName: "contact"
